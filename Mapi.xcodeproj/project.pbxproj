@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C0A0D9E1DD903FB00597583 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A0D9D1DD903FB00597583 /* MainVC.swift */; };
+		5C0A0DA01DD907D000597583 /* FlagCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C0A0D9F1DD907D000597583 /* FlagCell.swift */; };
 		5C33EDF71DD79F5B00863F11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33EDF61DD79F5B00863F11 /* AppDelegate.swift */; };
-		5C33EDF91DD79F5B00863F11 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C33EDF81DD79F5B00863F11 /* ViewController.swift */; };
 		5C33EDFC1DD79F5B00863F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFA1DD79F5B00863F11 /* Main.storyboard */; };
 		5C33EDFE1DD79F5B00863F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFD1DD79F5B00863F11 /* Assets.xcassets */; };
 		5C33EE011DD79F5B00863F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFF1DD79F5B00863F11 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C0A0D9D1DD903FB00597583 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		5C0A0D9F1DD907D000597583 /* FlagCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlagCell.swift; sourceTree = "<group>"; };
 		5C33EDF31DD79F5B00863F11 /* Mapi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mapi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C33EDF61DD79F5B00863F11 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C33EDF81DD79F5B00863F11 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5C33EDFB1DD79F5B00863F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C33EDFD1DD79F5B00863F11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C33EE001DD79F5B00863F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,6 +37,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C0A0D9A1DD903B600597583 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5C0A0D9D1DD903FB00597583 /* MainVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5C0A0D9B1DD903BE00597583 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5C0A0D9F1DD907D000597583 /* FlagCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5C0A0D9C1DD903CA00597583 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5C33EDEA1DD79F5B00863F11 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +79,10 @@
 		5C33EDF51DD79F5B00863F11 /* Mapi */ = {
 			isa = PBXGroup;
 			children = (
+				5C0A0D9C1DD903CA00597583 /* Model */,
+				5C0A0D9B1DD903BE00597583 /* View */,
+				5C0A0D9A1DD903B600597583 /* Controller */,
 				5C33EDF61DD79F5B00863F11 /* AppDelegate.swift */,
-				5C33EDF81DD79F5B00863F11 /* ViewController.swift */,
 				5C33EDFA1DD79F5B00863F11 /* Main.storyboard */,
 				5C33EDFD1DD79F5B00863F11 /* Assets.xcassets */,
 				5C33EDFF1DD79F5B00863F11 /* LaunchScreen.storyboard */,
@@ -136,8 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5C33EDF91DD79F5B00863F11 /* ViewController.swift in Sources */,
+				5C0A0D9E1DD903FB00597583 /* MainVC.swift in Sources */,
 				5C33EDF71DD79F5B00863F11 /* AppDelegate.swift in Sources */,
+				5C0A0DA01DD907D000597583 /* FlagCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +327,7 @@
 				5C33EE071DD79F5B00863F11 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

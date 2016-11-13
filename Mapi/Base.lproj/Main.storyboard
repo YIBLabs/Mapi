@@ -6,13 +6,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Mapi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Mapi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,9 +25,45 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mapi" translatesAutoresizingMaskIntoConstraints="NO" id="sW5-Lv-oyK">
                                 <rect key="frame" x="99.5" y="28" width="176" height="73"/>
                             </imageView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0j-Fv-dix">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="104" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="U0j-Fv-dix">
                                 <rect key="frame" x="0.0" y="158" width="375" height="509"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="104" id="oSL-TJ-VGs" customClass="FlagCell" customModule="Mapi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="104"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oSL-TJ-VGs" id="c2x-i7-Aqb">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="104"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mx" translatesAutoresizingMaskIntoConstraints="NO" id="SjR-hp-F7e">
+                                                    <rect key="frame" x="8" y="8" width="95" height="87"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="95" id="kRG-OP-xLS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ni5-4K-FUx">
+                                                    <rect key="frame" x="111" y="40" width="256" height="23.5"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="ni5-4K-FUx" firstAttribute="trailing" secondItem="c2x-i7-Aqb" secondAttribute="trailingMargin" id="AZe-9C-2vn"/>
+                                                <constraint firstItem="SjR-hp-F7e" firstAttribute="top" secondItem="c2x-i7-Aqb" secondAttribute="topMargin" id="Du1-ze-tMO"/>
+                                                <constraint firstItem="SjR-hp-F7e" firstAttribute="leading" secondItem="c2x-i7-Aqb" secondAttribute="leadingMargin" id="KZe-0C-XMe"/>
+                                                <constraint firstItem="ni5-4K-FUx" firstAttribute="centerY" secondItem="c2x-i7-Aqb" secondAttribute="centerY" id="X4h-IX-bDr"/>
+                                                <constraint firstItem="ni5-4K-FUx" firstAttribute="leading" secondItem="SjR-hp-F7e" secondAttribute="trailing" constant="8" id="jRh-Ji-NqC"/>
+                                                <constraint firstItem="SjR-hp-F7e" firstAttribute="bottom" secondItem="c2x-i7-Aqb" secondAttribute="bottomMargin" id="pxc-2X-7tB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryLabel" destination="ni5-4K-FUx" id="F8Q-2j-Ip7"/>
+                                            <outlet property="flagImageView" destination="SjR-hp-F7e" id="BsE-fV-hsE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.55294117647058827" green="0.85490196078431369" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -39,6 +76,9 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="U0j-Fv-dix" secondAttribute="bottom" id="vMs-Yq-9xU"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="U0j-Fv-dix" id="cGf-K8-AMq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -47,5 +87,6 @@
     </scenes>
     <resources>
         <image name="mapi" width="176" height="73"/>
+        <image name="mx" width="550" height="314"/>
     </resources>
 </document>
