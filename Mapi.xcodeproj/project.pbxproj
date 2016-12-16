@@ -13,6 +13,8 @@
 		5C33EDFC1DD79F5B00863F11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFA1DD79F5B00863F11 /* Main.storyboard */; };
 		5C33EDFE1DD79F5B00863F11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFD1DD79F5B00863F11 /* Assets.xcassets */; };
 		5C33EE011DD79F5B00863F11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C33EDFF1DD79F5B00863F11 /* LaunchScreen.storyboard */; };
+		5C7E64341E04786300407221 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7E64331E04786300407221 /* countries.json */; };
+		5C7E64381E047C2100407221 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E64371E047C2100407221 /* Country.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5C33EDFD1DD79F5B00863F11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5C33EE001DD79F5B00863F11 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C33EE021DD79F5B00863F11 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7E64331E04786300407221 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		5C7E64371E047C2100407221 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		5C0A0D9C1DD903CA00597583 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5C7E64371E047C2100407221 /* Country.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -79,6 +84,7 @@
 		5C33EDF51DD79F5B00863F11 /* Mapi */ = {
 			isa = PBXGroup;
 			children = (
+				5C7E64331E04786300407221 /* countries.json */,
 				5C0A0D9C1DD903CA00597583 /* Model */,
 				5C0A0D9B1DD903BE00597583 /* View */,
 				5C0A0D9A1DD903B600597583 /* Controller */,
@@ -152,6 +158,7 @@
 			files = (
 				5C33EE011DD79F5B00863F11 /* LaunchScreen.storyboard in Resources */,
 				5C33EDFE1DD79F5B00863F11 /* Assets.xcassets in Resources */,
+				5C7E64341E04786300407221 /* countries.json in Resources */,
 				5C33EDFC1DD79F5B00863F11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7E64381E047C2100407221 /* Country.swift in Sources */,
 				5C0A0D9E1DD903FB00597583 /* MainVC.swift in Sources */,
 				5C33EDF71DD79F5B00863F11 /* AppDelegate.swift in Sources */,
 				5C0A0DA01DD907D000597583 /* FlagCell.swift in Sources */,
