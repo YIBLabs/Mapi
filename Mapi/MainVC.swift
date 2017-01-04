@@ -11,6 +11,7 @@ import UIKit
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
+    var countryArray = [Country]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,13 +23,14 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return countryArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FlagCell {
             
+            cell.configureCell(country: countryArray[indexPath.row])
             return cell
         }
         
@@ -50,6 +52,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                         if let countryName = country["Name"], let countryCode = country["Code"] {
                             
                             print("\(countryName) \(countryCode)")
+                            let newCountry = Country(name: countryName, alphaCode: countryCode)
+                            self.countryArray.append(newCountry)
                         }
                     }
                 }

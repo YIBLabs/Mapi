@@ -12,5 +12,11 @@ class FlagCell: UITableViewCell {
 
     @IBOutlet weak var flagImageView: UIImageView!
     @IBOutlet weak var countryLabel: UILabel!
-
+    
+    
+    func configureCell(country: Country) {
+        
+        countryLabel.text = country.name
+        flagImageView.image = UIImage(named : country.alphaCode.lowercased())
+    }
 }
