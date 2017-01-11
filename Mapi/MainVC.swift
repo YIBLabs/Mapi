@@ -30,11 +30,28 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? FlagCell {
             
-            cell.configureCell(country: countryArray[indexPath.row])
+            cell.configureCell(countryArray[indexPath.row])
             return cell
         }
         
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let country = countryArray[indexPath.row]
+        self.performSegue(withIdentifier: "detailCountry", sender: country)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let destination = segue.destination as? DetailCountryVC {
+            
+            if let selectedCountry = sender as? Country {
+                
+                destination.country = selectedCountry
+            }
+        }
     }
 
     func loadJSON() {

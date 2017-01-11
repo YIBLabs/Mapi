@@ -14,7 +14,7 @@ class FlagCell: UITableViewCell {
     @IBOutlet weak var countryLabel: UILabel!
     
     
-    func configureCell(country: Country) {
+    func configureCell(_ country: Country) {
         
         countryLabel.text = country.name
         flagImageView.image = UIImage(named : country.alphaCode.lowercased())
