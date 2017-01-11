@@ -14,6 +14,7 @@ class Country {
     private var _name: String
     private var _alphaCode: String
     private var _capital: String!
+    private var _latlng: [Double]!
     
     //Getters
     var name: String {
@@ -36,6 +37,16 @@ class Country {
         }
     }
     
+    var latlong: [Double] {
+        
+        get {
+            return _latlng
+        }
+        set {
+            _latlng = newValue
+        }
+    }
+    
     init(name: String, alphaCode: String) {
         self._name = name
         self._alphaCode = alphaCode
@@ -47,8 +58,9 @@ class Country {
             
             if let json = response.result.value as? Dictionary<String, Any> {
                 
-                if let jsonCapital = json["capital"] as? String {
+                if let jsonCapital = json["capital"] as? String , let coord = json["latlng"] as? [Double] {
                     self.capital = jsonCapital
+                    self.latlong = coord
                     completed()
                 }
             }

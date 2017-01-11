@@ -26,6 +26,14 @@ class DetailCountryVC: UIViewController {
             
             currentCountry.downloadCountryDetails {
                 self.capitalLabel.text = currentCountry.capital
+                
+                let lat = currentCountry.latlong[0]
+                let long = currentCountry.latlong[1]
+                
+                let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: long)
+                
+                self.mapView.centerCoordinate = coordinate
+                self.mapView.region.span = MKCoordinateSpanMake(10, 10)
             }
         }
         
