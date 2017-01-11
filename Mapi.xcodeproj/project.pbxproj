@@ -18,6 +18,7 @@
 		5C7E64341E04786300407221 /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7E64331E04786300407221 /* countries.json */; };
 		5C7E64381E047C2100407221 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7E64371E047C2100407221 /* Country.swift */; };
 		5CB9A8761E25A7060098ED22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB9A8751E25A7060098ED22 /* Constants.swift */; };
+		5CB9A8781E25C0380098ED22 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CB9A8771E25C0380098ED22 /* MaterialView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5C7E64331E04786300407221 /* countries.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
 		5C7E64371E047C2100407221 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		5CB9A8751E25A7060098ED22 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5CB9A8771E25C0380098ED22 /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		62863515526F39647AB226A4 /* Pods-Mapi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapi.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mapi/Pods-Mapi.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				5C0A0D9F1DD907D000597583 /* FlagCell.swift */,
+				5CB9A8771E25C0380098ED22 /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				5C0A0D9E1DD903FB00597583 /* MainVC.swift in Sources */,
 				5C33EDF71DD79F5B00863F11 /* AppDelegate.swift in Sources */,
 				5C0A0DA01DD907D000597583 /* FlagCell.swift in Sources */,
+				5CB9A8781E25C0380098ED22 /* MaterialView.swift in Sources */,
 				5CB9A8761E25A7060098ED22 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
